@@ -1,0 +1,14 @@
+{
+  "name": "serverguard",
+  "version": "1.0.0",
+  "description": "A submission by Nebelung for the ServerGuard/ProxyGuard event.",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve public --no-request-logging"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+}
