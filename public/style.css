@@ -1,6 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;800;900&display=swap');
+
 body {
     --background: #1f003e;
+    --secondary: #12002454;
+    --border: #b29dc688;
+    --text: #cdd6f4;
+    --green: #40a02b;
+    --yellow: #FFEB3B;
+    --red: #ef4444;
+    --font: "Raleway", sans-serif;
     background: var(--background);
+    font-family: var(--font);
+    color: var(--text);
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,11 +22,60 @@ body {
 }
 
 .main {
-    border: 1px solid #b29dc688;
-    background-color: #1f003e54;
+    border: 1px solid var(--border);
+    background-color: var(--secondary);
     border-radius: 30px;
     padding: 30px;
     width: 780px;
     max-width: calc(100% - 8rem);
     min-height: 16rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.background {
+    background: url("/bg.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: rotate(90deg);
+}
+
+.title {
+    font-weight: 800;
+    font-size: 40px;
+    margin-bottom: 0;
+}
+
+.greenIcon {
+    color: var(--green);
+}
+
+.yellowIcon {
+    color: var(--yellow);
+}
+
+.redIcon {
+    color: var(--red);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spin {
+    display: flex;
+    animation: spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
 }
